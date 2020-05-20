@@ -41,6 +41,7 @@ small, .text_small {font-size: 0.75em;}
     box-shadow: 0 8px 6px -6px #999;
 }
 
+/* Logo */
 img#logo {
   width: 200px;
 }
