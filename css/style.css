@@ -36,7 +36,12 @@ small, .text_small {font-size: 0.75em;}
 
 .color-green {
   background-color: #73D06B;
-  border-color: #73D06B;
+  border: none;
+}
+
+.color-green:hover {
+  background-color: rgb(101, 185, 94);
+
 }
 
 
