@@ -39,6 +39,7 @@ small, .text_small {font-size: 0.75em;}
   border-color: #73D06B;
 }
 
+
 /* Navbar */
 .navbar {
     -webkit-box-shadow: 0 8px 6px -6px #999;
@@ -63,7 +64,7 @@ img#logo {
   display: block;
 }
 
-.carousel-item {
+#whoweare .carousel-item {
   height: 95vh;
 }
 
@@ -94,10 +95,37 @@ img#logo {
   } 
 }
 
+/* About Us */
 #about {
   background-color: #f8f9fa;
 }
 
 #about h2, #about h3{
   /* color: #DC1521; */
+}
+
+#about h3 {
+  margin-top: 1rem;
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: #168E81; 
+}
+
+#testimoCarousel {
+  /* height: 30vh; */
+}
+
+#testimoCarousel .carousel-inner {
+  margin-bottom: 2rem;
+}
+
+#testimoCarousel .carousel-indicators {
+  bottom: -50px;
+}
+
+#testimoCarousel .carousel-control {
+  bottom: auto;
+  bottom: 110px;
 }

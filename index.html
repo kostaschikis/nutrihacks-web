@@ -20,6 +20,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./img/profile.png">
 
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/6218de5707.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="page-top">
@@ -110,9 +112,9 @@
     </div>
     <hr>
     <!-- Responsive Video -->
-    <div class="row text-center">
+    <div class="row text-center align-items-center justify-content-center">
       <!-- Video -->
-      <div class="col-md-6 col-12 px-6 mb-3">
+      <div class="col-12 px-6 mb-3">
         <h3>Take Control of Your Body</h3>
         <div class="container video">
           <div class="embed-responsive embed-responsive-16by9">
@@ -120,30 +122,60 @@
           </div>    
         </div>
       </div>
-      <!-- Our Philosophy -->
-      <div class="col-md-6 col-12 px-6">
-        <h3>Our Philosophy</h3>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dolorum.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dolorum.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dolorum.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dolorum.</li>
-          </ul>
+      <!-- Call To Action -->
+      <div class="p-4">
+        <a class="btn btn-primary btn-lg" href="views/our-team.html">Meet The Team</a>
       </div>
     </div>
   </div>
 </section>
 
-  <section id="services" class="bg-light">
-    <div class="container-fluid text-white" style="background-color: #168E81;">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Section: Testimonials -->
+<div class="container-fluid py-4" id="testimonials">
+  <div class="row text-center justify-content-center text-light mb-3">
+    <h2>Our Clients Said</h2>
+  </div>
+  <div class="row text-light">
+    <div class="col-md-8 col-center m-auto">
+      <div id="testimoCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#testimoCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#testimoCarousel" data-slide-to="1"></li>
+					<li data-target="#testimoCarousel" data-slide-to="2"></li>
+				</ol>   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+          <!-- Client 1 -->
+					<div class="item carousel-item active">
+						<div class="img-box text-center mb-3"><img src="./img/user.png" style="width: 100px;" alt=""></div>
+						<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+						<p class="overview"><b>Paula Wilson</b>, Yoga Instructor</p>
+          </div>
+          <!-- Client 2 -->
+					<div class="item carousel-item">
+						<div class="img-box text-center mb-3"><img src="./img/user.png" style="width: 100px;" alt=""></div>
+						<p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+						<p class="overview"><b>Antonio Moreno</b>, Gym Instructor</p>
+          </div>
+          <!-- Client 3 -->
+					<div class="item carousel-item">
+						<div class="img-box text-center mb-3"><img src="./img/user.png" style="width: 100px;" alt=""></div>
+						<p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+						<p class="overview"><b>Michael Holz</b>, Entrepreneur</p>
+					</div>
+				</div>
+				<!-- Carousel controls -->
+        <a class="carousel-control left carousel-control-prev" href="#testimoCarousel" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+				</a>
+				<a class="carousel-control right carousel-control-next" href="#testimoCarousel" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+    </div>	
+  </div>
+</div>
 
   <section id="contact">
     <div class="container">
