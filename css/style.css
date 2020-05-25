@@ -139,3 +139,14 @@ img#logo {
   bottom: auto;
   bottom: 110px;
 }
+
+/* Contact Modal */
+#contactmodal  input[type=submit], #contactmodal  button#save {
+  background-color: #168E81;
+  border: none;
+}
+
+#contactmodal  input[type=submit]:hover, #contactmodal  button#save:hover {
+  background-color: rgb(18, 110, 101);
+  border: none;
+}
