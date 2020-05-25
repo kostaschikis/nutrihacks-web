@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 
+
 html {font-size: 100%;} /*16px*/
 
 body {
@@ -41,9 +42,13 @@ small, .text_small {font-size: 0.75em;}
 
 .color-green:hover {
   background-color: rgb(101, 185, 94);
-
+  border: none;
 }
 
+.color-green:focus {
+  background-color: #73D06B;
+  border: none;
+}
 
 /* Navbar */
 .navbar {

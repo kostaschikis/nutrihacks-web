@@ -115,13 +115,14 @@
     <div class="row text-center">
       <div class="col">
         <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, odio suscipit similique magnam perferendis sunt. Laborum tenetur deleniti libero sequi.</p>
       </div>
     </div>
     <hr>
     <!-- Responsive Video -->
-    <div class="row text-center align-items-center justify-content-center">
+    <div class="row text-center justify-content-center">
       <!-- Video -->
-      <div class="col-12 px-6 mb-3">
+      <div class="col-md-6  px-6 mb-3">
         <h3>Take Control of Your Body</h3>
         <div class="container video">
           <div class="embed-responsive embed-responsive-16by9">
@@ -130,8 +131,21 @@
         </div>
       </div>
       <!-- Call To Action -->
-      <div class="p-4">
-        <a class="btn btn-primary btn-lg" href="views/our-team.html">Meet The Team</a>
+      <div class="col-md-6 px-6 mb-3 d-flex flex-column">
+        <h3 class="text-center">Some Health Tips From Our Team</h3>
+        <ul class="align-items-flex-start text-left">
+          <li>Get active each day</li>
+          <li>Choose water as a drink</li>
+          <li>Eat more fruit and vegetables</li>
+          <li>Turn Off the TV or Computer and Get Active</li>
+        </ul>
+        <p class="text-left px-4">
+          ↪ For good health, we need more than 40 different nutrients, and no single food can supply them all. It is not about a single meal, it is about a balanced food choice over time that will make a difference!
+        </p>
+        <p class="text-left px-4">
+          ↪ About half the calories in our diet should come from foods rich in carbohydrates, such as cereals, rice, pasta, potatoes, and bread. It is a good idea to include at least one of these at every meal. Wholegrain foods, like wholegrain bread, pasta, and cereals, will increase our fibre intake.
+        </p>
+        <a class="btn btn-primary btn-lg align-self-center" href="views/our-team.html">Meet The Team</a>
       </div>
     </div>
   </div>
@@ -142,6 +156,7 @@
   <div class="row text-center justify-content-center text-light mb-3">
     <h2>Our Clients Said</h2>
   </div>
+  <hr>
   <div class="row text-light">
     <div class="col-md-8 col-center m-auto">
       <div id="testimoCarousel" class="carousel slide" data-ride="carousel">
@@ -184,21 +199,88 @@
   </div>
 </section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+<!-- Section: Contact Us -->
+<div class="container-fluid py-4 bg-light" id="contact">
+  <div class="row text-center justify-content-center text-light mb-3">
+    <h2 class="text-dark">Contact Us</h2>
+  </div>
+  <hr>
+  <!-- Maps & Info -->
+  <div class="row">
+    <div class="col-md-6">
+      <img src="./img/map.png" alt="" class="img img-fluid w-80 p-2">
+    </div>
+    <div class="col-md-5 text-center justify-content-center text-dark">
+      <h4 class="p-2 mt-0">Contact Address</h4>
+      <p> <i class="fas fa-home"></i> LibeDime Studios, Belgium</p>
+      <p> <i class="fas fa-phone"></i> Tel: +30-123456-78-9</p>
+    </div>
+  </div>
+  <hr>
+  <!-- Contact Modal -->
+  <div class="row justify-content-center mt-4">
+    <!-- Button: Contact Modal -->
+    <a class="btn btn-lg color-green" data-toggle="modal" data-target="#contactmodal">  
+      Contact Us
+    </a>
+
+    <!-- Contact Form Modal -->
+    <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title id="exampleModalLabel">Feel Free to Contact Us</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-user"></i></div>
+                </div>
+                <input type="text" class="form-control" name="name" placeholder="First Name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                </div>
+                <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-comment"></i></div>
+                </div>
+                <textarea class="form-control" placeholder="Write your message here..." required></textarea>
+              </div>
+            </div>
+            <!-- Submit -->
+            <div class="text-center">
+                <input type="submit" value="Submit" class="btn btn-primary btn-block rounded-0 py-2">
+            </div>
+          </div>
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Kostas Chikimtzis@NutriHacks 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy; NutriHacks 2020 | Kostas Chikimtzis@e16162</p>
     </div>
   </footer>
 
