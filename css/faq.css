@@ -20,3 +20,13 @@ body, .sticky-footer-wrapper {
  .flex-fill {
     flex:1 1 auto;
 }
+
+.question {
+    font-size: 2rem;
+}
+
+@media (max-width: 767.98px) {
+    .question {
+        font-size: 1.2rem;
+    }
+}
