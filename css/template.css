@@ -5,6 +5,7 @@ body {
 header {
     height: 25vh;
     background-color: #168E81;
+    /* background-color: #5781b9; */
 }
 
 @media (max-width: 767.98px) {
@@ -41,4 +42,8 @@ body, .sticky-footer-wrapper {
     .question {
         font-size: 1.2rem;
     }
+}
+
+#contact {
+    
 }
