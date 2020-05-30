@@ -4,7 +4,7 @@
 - [ ] Transform all images to Webp
 - [ ] Comment Blog
 - [ ] Comment Contact
-- [ ] Comment FAQ
+- [x] Comment FAQ
 - [x] Comment Our-Team
  
 ## Late Tasks
