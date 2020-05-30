@@ -2,8 +2,8 @@
 
 - [x] Blog Responsives
 - [ ] Transform all images to Webp
-- [ ] Comment Blog
-- [ ] Comment Contact
+- [x] Comment Blog
+- [x] Comment Contact
 - [x] Comment FAQ
 - [x] Comment Our-Team
  
