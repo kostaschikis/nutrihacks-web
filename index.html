@@ -26,17 +26,19 @@
 
 <body id="page-top">
 
-<!-- Navigation -->
+<!-- Navigation (with navbar toggler for mobile phones)  -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+  <!-- Bootstrap flex container: 2 flex items -->
   <div class="container">
-    <!-- Logo -->
+    <!-- 1st flex item: Logo -->
     <a class="navbar-brand d-flex d-sm-block" href="index.html">
       <img id="logo" src="img/cover-crop.png" alt="">
     </a>
+    <!-- Navbar toggler that appears only for small screens -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Nav Links -->
+    <!-- 2nd flex item: Nav Links -->
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -86,6 +88,7 @@
       <img class=" img-fluid d-block w-100 " src="img/nutri3.jpg" alt="New York">
       <div class="carousel-caption">
         <h3 class="display-4">Track your BMI with our app</h3>
+        <!-- note: .color green is a custom class -->
         <a class="btn btn-light btn-lg color-green" href="./views/bmi.html">Calculate your BMI</a>
       </div>
     </div>
@@ -110,18 +113,22 @@
 
 <!-- Section: About Us -->
 <section id="about">
+  <!-- Bootstrap container fluid for full width -->
   <div class="container-fluid py-3">
-    <!-- About Us Text -->
+    <!-- About Us Text: Flex container: 1 flex item -->
     <div class="row text-center">
+      <!-- Flex item with auto width  -->
       <div class="col">
         <h2>About Us</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, odio suscipit similique magnam perferendis sunt. Laborum tenetur deleniti libero sequi.</p>
       </div>
     </div>
     <hr>
-    <!-- Responsive Video -->
+    <!-- Responsive Video: Flex container: 2 flex items -->
+    <!-- For medium screens an up -> align the 2 flex items horizontaly-->
+    <!-- For small screens -> align the 2 flex items vertically -->
     <div class="row text-center justify-content-center">
-      <!-- Video -->
+      <!-- 1st Flex item: Video -->
       <div class="col-md-6  px-6 mb-3">
         <h3>Take Control of Your Body</h3>
         <div class="container video">
@@ -130,7 +137,7 @@
           </div>    
         </div>
       </div>
-      <!-- Call To Action -->
+      <!-- 2nd Flex item: Text & Call To Action -->
       <div class="col-md-6 px-6 mb-3 d-flex flex-column">
         <h3 class="text-center">Some Health Tips From Our Team</h3>
         <ul class="align-items-flex-start text-left">
@@ -145,6 +152,7 @@
         <p class="text-left px-4">
           ↪ About half the calories in our diet should come from foods rich in carbohydrates, such as cereals, rice, pasta, potatoes, and bread. It is a good idea to include at least one of these at every meal. Wholegrain foods, like wholegrain bread, pasta, and cereals, will increase our fibre intake.
         </p>
+        <!-- Meet the team button: button primary -->
         <a class="btn btn-primary btn-lg align-self-center shadow" href="views/our-team.html">Meet The Team</a>
       </div>
     </div>
@@ -153,11 +161,14 @@
 
 <!-- Section: Testimonials -->
 <section class="container-fluid py-4" id="testimonials">
+  <!-- Flex container to align just the h2 to the center -->
   <div class="row text-center justify-content-center text-light mb-3">
     <h2>Our Clients Said</h2>
   </div>
   <hr>
+  <!-- Flex container with 1 flex item -->
   <div class="row text-light">
+    <!-- The flex item: align all testimonial content to the center -->
     <div class="col-md-8 col-center m-auto">
       <div id="testimoCarousel" class="carousel slide" data-ride="carousel">
 				<!-- Carousel indicators -->
@@ -201,31 +212,37 @@
 
 <!-- Section: Contact Us -->
 <div class="container-fluid py-4 bg-light" id="contact">
+  <!-- Flex container to align just the h2 to the center -->
   <div class="row text-center justify-content-center text-light mb-3">
     <h2 class="text-dark">Contact Us</h2>
   </div>
   <hr>
   <!-- Maps & Info -->
+  <!-- Flex container with 2 flex items -->
+  <!-- For large screens align flex items horizontally -->
+  <!-- For small screens align flex items vertically -->
   <div class="row justify-content-center px-5" id="info">
+    <!-- 1st Flex item: Map -->
     <div class="col-lg m-2">
       <img src="./img/map.png" alt="" class="img img-fluid shadow-lg w-80 ">
     </div>
+    <!-- 2nd Flex item: Contact Info -->
     <div class="col-lg d-flex flex-column justify-content-center text-center text-dark">
-      <h4 class="p-2 mt-0">Contact Address <i class="fas fa-address-card"></i></h4>
+      <h4 class="p-2 mt-0">Contact Info <i class="fas fa-address-card"></i></h4>
       <p> <i class="fas fa-home"></i> NutriHacks Diet Center, Greece</p>
       <p> <i class="fas fa-phone"></i> Tel: +30-123456-78-9</p>
       <p> <i class="fas fa-envelope"></i> nutrihacks@info.com</p>
     </div>
   </div>
   <hr>
-  <!-- Contact Modal -->
+  <!-- Contact Button -->
   <div class="row justify-content-center mt-4">
-    <!-- Button: Contact Modal -->
+    <!-- Button to toggle contact Modal -->
     <a class="btn btn-lg color-green shadow" data-toggle="modal" data-target="#contactmodal">  
       Contact Us
     </a>
 
-    <!-- Contact Form Modal -->
+    <!-- Bootstrap contact form Modal -->
     <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -264,12 +281,15 @@
             </div>
             <!-- Submit -->
             <div class="text-center">
+                <!-- Bootstrap primary button but with changed color -->
                 <input type="submit" value="Submit" class="btn btn-primary btn-block rounded-0 py-2">
             </div>
           </div>
           <!-- Modal Footer -->
           <div class="modal-footer">
+            <!-- Bootstrap secondary button -->
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- Bootstrap primary button but with changed color -->
             <button type="button" class="btn btn-primary" id="save">Save changes</button>
           </div>
         </div>
