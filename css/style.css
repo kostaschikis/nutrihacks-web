@@ -154,3 +154,21 @@ img#logo {
     padding: 0 !important;
   }
 }
+
+@media (max-width: 767.98px) { 
+  /* Blog */
+  ul#articles {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  li.media {
+    flex-direction: column;
+    padding: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  li.media img {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+}
