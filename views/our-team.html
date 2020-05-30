@@ -61,6 +61,7 @@
   </nav>
 
   <!-- Header -->
+  <!-- Flex container to align h2 and p -->`
   <header class="p-4 d-flex flex-column align-items-center justify-content-center" id="our-team">
     <h1 class="text-center mt-6 display-3 text-light">Our Team</h1>
     <p class="text-light text-center">Our team consists of professionals in the field</p>
@@ -68,42 +69,55 @@
 
   <!-- Main: Team Cards -->
   <main class="flex-fill" role="main">
+    <!-- Bootstrap Container  -->
     <div class="container-fluid py-4 bg-light" id="our-team">
+    <!-- Flex container to align just the h2 to the center -->  
       <div class="row text-center justify-content-center mb-3">
         <h2 class="font-weight-medium mt-2">Meet Them <i class="fas fa-users"></i></h2>
       </div>
+      <!-- Flex container: 3 flex items -->
+      <!-- Each flex item centers it's content within -->
       <div class="row justify-content-center">
-        <!-- Anna Nguyen -->
+        <!-- 1st Flex item: Anna Nguyen -->
+        <!-- Bootstrap card: 2 flex items -->
+        <!-- Aligns image and card body -->
         <div class="card person text-center p-2 mx-2" style="width:400px">
+          <!-- 1st Flex item: Image -->
           <img class="card-img-top img-fluid" src="../img/nutritionist.jpg" alt="Card image">
+          <!-- 2nd Flex item: Card Body -->
           <div class="card-body">
             <h4 class="card-title mt-1">Anna Nguyen</h4>
             <p class="card-text text-secondary">CEO & Founder</p>
             <p class="card-text mb-2">Nutritionist</p>
+            <!-- Bootstrap blockquote -->
             <blockquote class="blockquote">
               <footer class="blockquote-footer">Lorem ipsum dolor sit amet.</footer>
             </blockquote>
           </div>
         </div>
-        <!-- Lily Shelton -->
+        <!-- 2nd Flex item: Lily Shelton -->
+        <!-- Bootstrap card: 2 flex items -->
         <div class="card person text-center p-2 mx-2" style="width:400px">
           <img class="card-img-top img-fluid" src="../img/dietologist.jpg" alt="Card image">
           <div class="card-body">
             <h4 class="card-title mt-1">Lily Shelton</h4>
             <p class="card-text text-secondary">COO</p>
             <p class="card-text mb-2">Dietologist</p>
+            <!-- Bootstrap blockquote -->
             <blockquote class="blockquote">
               <footer class="blockquote-footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</footer>
             </blockquote>
           </div>
         </div>
-        <!-- Joel Dixon -->
+        <!-- 3rd Flex item: Joel Dixon -->
+        <!-- Bootstrap card: 2 flex items -->
         <div class="card person text-center p-2 mx-2" style="width:400px">
           <img class="card-img-top img-fluid" src="../img/trainer.jpg" alt="Card image">
           <div class="card-body">
             <h4 class="card-title mt-1">Joel Dixon</h4>
             <p class="card-text text-secondary">CTO</p>
             <p class="card-text mb-2">Trainer</p>
+            <!-- Bootstrap blockquote -->
             <blockquote class="blockquote">
               <footer class="blockquote-footer">Lorem, ipsum dolor sit amet consectetur</footer>
             </blockquote>
