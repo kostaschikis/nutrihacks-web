@@ -50,6 +50,12 @@ small, .text_small {font-size: 0.75em;}
   border: none;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none !important; 
+  margin: 0 !important; 
+}
+
 /* Navbar */
 .navbar {
     -webkit-box-shadow: 0 8px 6px -6px #999;
