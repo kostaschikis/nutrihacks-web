@@ -27,6 +27,11 @@ $(function() {
     designetion.text(des.text);
     designetion.removeClass('text-muted');
     designetion.css('color', des.color);
+
+    // 6. If client is on mobile device -> scroll result into view
+    if (document.documentElement.clientWidth < 768) {
+      document.getElementById('bmi-des').scrollIntoView();
+    }
   })
 })
 
