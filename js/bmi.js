@@ -30,15 +30,17 @@ $(function() {
   })
 })
 
-// Calculates BMI and returns it as a string with 1 decimal
+// Calculates BMI and returns it with 1 decimal & converts it into a string 
 function calcBMI(weight, height) {
   if (weight > 0 && height > 0) {
     return parseFloat((weight / Math.pow(height, 2)) * 10000).toFixed(1);
   } else return 0
 } 
 
-// Finds weight designation based on BMI
+// Finds weight designation based on BMI and gender 
+// Returns an object with the text to display & the appropriate color to match the designation
 function findDes(bmi, gender) {
+  // Converts bmi into a float because initially it passes through the function as a string
   bmi = parseFloat(bmi);
 
   if (gender === 'male') {

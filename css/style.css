@@ -56,6 +56,16 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 !important; 
 }
 
+input[type=number]::-moz-inner-spin-button, 
+input[type=number]::-moz-outer-spin-button { 
+  -moz-appearance: none !important; 
+  margin: 0 !important; 
+}
+
+input[type=radio]:focus {
+  outline: none;
+}
+
 /* Navbar */
 .navbar {
     -webkit-box-shadow: 0 8px 6px -6px #999;
