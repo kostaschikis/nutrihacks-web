@@ -35,7 +35,7 @@ $(function() {
   })
 })
 
-// Calculates BMI and returns it with 1 decimal & converts it into a string 
+// Calculates BMI and returns it with 1 decimal
 function calcBMI(weight, height) {
   if (weight > 0 && height > 0) {
     return parseFloat((weight / Math.pow(height, 2)) * 10000).toFixed(1);

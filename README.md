@@ -2,6 +2,7 @@
 
 - [x] Blog Responsives
 - [ ] Transform all images to Webp
+- [ ] Comment BMI
 - [x] Comment Blog
 - [x] Comment Contact
 - [x] Comment FAQ
