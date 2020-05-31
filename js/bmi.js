@@ -28,9 +28,9 @@ $(function() {
     designetion.removeClass('text-muted');
     designetion.css('color', des.color);
 
-    // 6. If client is on mobile device -> scroll result into view
+    // 6. If client is on mobile device -> scroll result into view (result will be at the center of the screen)
     if (document.documentElement.clientWidth < 768) {
-      document.getElementById('bmi-des').scrollIntoView();
+      document.getElementById('bmi-result').scrollIntoView({behavior: "smooth", block: "center"});
     }
   })
 })
@@ -70,7 +70,7 @@ function findDes(bmi, gender) {
     } else if (bmi >= 28.7 && bmi <= 40) {
       return {text: 'Obese', color: '#FC3865'};
     } else if (bmi > 40) {
-      return {text: 'Morbidly obese', color: '#FC3865'};
+      return {text: 'Morbidly obese', color: '#DA0000'};
     }
   } else return null;
 }

@@ -72,6 +72,7 @@
     <div class="container">
       <div class="row justify-content-center align-content-center mt-3 shadow"> 
         <div class="p-4 border flex-fill">
+          <!-- Bootstrap Form -->
           <form role="form" id="bmi">     
             <div>
               <div class="form-group">
@@ -99,15 +100,53 @@
         </div>
       </div>
       <div class="row mb-4 justify-content-center">
-        <!-- Calculated BMI is shown here -->
+        <!-- Calculated BMI & designation is shown here -->
         <div class="well text-center">
-          <h3 class="text-muted">Calculated BMI</h3>
+          <h3 class="text-muted" id="bmi-text">Calculated BMI</h3>
           <h2><span class="label" id="bmi-result" title="">0.0</span></h2>
           <h4 class="text-muted" id="bmi-des">unknown</h4>
         </div>
       </div>
       <div class="row mb-4">
-        <img class="img img-fluid border" src="../img/bmi.png" alt="">
+        <!-- Boostrap Table to display BMI Categories -->
+        <table class="table text-center table-striped table-bordered shadow">
+          <!-- Bootstrap Table Head -->
+          <thead> 
+            <tr>
+              <th scope="col" style="color: #65B95E">BMI (Male)</th>
+              <th scope="col" style="color: #65B95E">BMI (Female)</th>
+              <th scope="col" class="align-middle" style="color: #65B95E">Designation</th>
+            </tr>
+          </thead>
+          <!-- Bootstrap Table Body -->
+          <tbody>
+            <tr>
+              <td>&lt; 19.5</td>
+              <td>&lt; 18.5</td>
+              <td style="color: #147895">Underweight</td>
+            </tr>
+            <tr>
+              <td>19.5 - 24.9</td>
+              <td>18.5 - 23.5</td>
+              <td style="color: #4DB752">Normal</td>
+            </tr>
+            <tr>
+              <td>25 - 29.9</td>
+              <td>23.6 - 28.6</td>
+              <td style="color: #E4512B">Overweight</td>
+            </tr>
+            <tr>
+              <td>30 - 40</td>
+              <td>28.7 - 40</td>
+              <td style="color: #FC3865">Obese</td>
+            </tr>
+            <tr>
+              <td>&gt; 40</td>
+              <td>&gt; 40</td>
+              <td style="color: #DA0000">Morbidly obese</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </main>
