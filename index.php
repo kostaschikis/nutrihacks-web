@@ -65,55 +65,58 @@
   </div>
 </nav>
 
-<!-- Register Modal -->
+<!-- Register Bootstrap Modal -->
 <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+      <!-- Bootstrap Modal Header -->
       <div class="modal-header">
           <h4 class="mt-3 text-center">Sign Up</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
           </button>
       </div>
+      <!-- Bootstrap Modal Body - Register Form -->
       <div class="modal-body">
-        <form class="pb-modalreglog-form-reg">
-          <div class="form-group">
-            <div id="pb-modalreglog-progressbar"></div>
-          </div>
+        <form>
+          <!-- Name form group -->
           <div class="form-group">
             <label class="font-weight-bold" for="name">Name</label>
             <div class="input-group pb-modalreglog-input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                 <input type="text" class="form-control" name="name" id="inputName" placeholder="Your Name">
             </div>
           </div>
+          <!-- Username form group -->
           <div class="form-group">
             <label class="font-weight-bold" for="username">Username</label>
             <div class="input-group pb-modalreglog-input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                 <input type="text" class="form-control" name="username" id="inputUsername" placeholder="Username">
             </div>
           </div>
+          <!-- Email form group -->
           <div class="form-group">
             <label class="font-weight-bold" for="email">Email address</label>
             <div class="input-group pb-modalreglog-input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                 <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
             </div>
           </div>
+          <!-- Password form group -->
           <div class="form-group">
             <label class="font-weight-bold" for="password">Password</label>
             <div class="input-group pb-modalreglog-input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                 <input type="password" class="form-control" name="password" id="inputPws" placeholder="Password">
             </div>
           </div>
-          <div class="form-group d-flex mb-2">
+          <!-- Terms & Conditions form group -->
+          <div class="form-group d-flex align-items-center mb-2 ">
             <input class="mr-2" type="checkbox" id="ch" name="chs">
-            I agree with <a href="#">terms and conditions.</a>
+            <span>
+              I agree with <a href="#"> terms and conditions.</a>
+            </span>
           </div>
         </form>
       </div>
+      <!-- Bootstrap Modal Footer -->
       <div class="modal-footer justify-content-center">
           <button type="button" class="btn color-green">Sign up</button>
       </div>
