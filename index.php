@@ -57,7 +57,7 @@
           </li>
           <li class="nav-item align-self-center">
             <form class="form-inline">
-              <button type="button" class="btn btn-light color-green" data-toggle="modal" data-target="#modalRegisterForm">Register</button>
+              <button type="button" class="btn btn-light color-green" data-toggle="modal" id="reg-btn" data-target="#modalRegisterForm">Register</button>
             </form>
           </li>
         </ul>
@@ -73,7 +73,7 @@
         <!-- Bootstrap Modal Header -->
         <div class="modal-header">
             <h4 class="mt-3 text-center">Sign Up</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="regmodal-dis">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -124,7 +124,26 @@
       </div>
     </div>
   </div>
-    
+
+  <!-- Register Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <!-- Bootstrap modal content -->
+      <div class="modal-content">
+        <!-- Modal header -->
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title text-success mt-3" id="exampleModalLongTitle">
+            You registerd successfully, welcome aboard 💪
+          </h5>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Section: Who We Are Carousel -->
   <header id="whoweare" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

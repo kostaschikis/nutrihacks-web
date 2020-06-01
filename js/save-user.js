@@ -12,15 +12,20 @@ $(function(){
       email: $('#inputEmail').val(),
       password: $('#inputPws').val()
     };
-
     // Make AJAX POST request to save the user in DB
     $.ajax({
       type: 'post',
       url: `${root}php/register.php`,
       data: user,
       success: function(res) {
-        // console.log('User stored successfully');
-        window.location.href = "./index.php?regSuccess=true";
+        console.log('User stored successfully');
+        $('#modalRegisterForm').modal('hide');
+        $('#successModal').modal('show'); 
+        // $('#reg-btn').hide();
+      },
+      error: function(res) {
+        $('#modalRegisterForm').modal('hide');
+        alert('Something went wrong, please try again');
       }
     });
 
