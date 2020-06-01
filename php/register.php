@@ -37,9 +37,6 @@ function register_user($name, $username, $email, $password, $conn) {
 
     mysqli_stmt_bind_param($stmt, "ssss", $username, $hashedPassword, $name, $email);
     mysqli_stmt_execute($stmt);
-
-    header("Location: ../index.php?regSuccess=true");
+    $stmt->close();
   }
-
-  $stmt->close();
 }
