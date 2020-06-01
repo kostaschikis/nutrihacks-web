@@ -68,6 +68,7 @@
 <!-- Register Bootstrap Modal -->
 <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
+    <!-- Boostrap Modal Content -->
     <div class="modal-content">
       <!-- Bootstrap Modal Header -->
       <div class="modal-header">
