@@ -78,7 +78,7 @@
       </div>
       <!-- Bootstrap Modal Body - Register Form -->
       <div class="modal-body">
-        <form>
+        <form id="registerForm">
           <!-- Name form group -->
           <div class="form-group">
             <label class="font-weight-bold" for="name">Name</label>
@@ -114,12 +114,12 @@
               I agree with <a href="#"> terms and conditions.</a>
             </span>
           </div>
-        </form>
-      </div>
-      <!-- Bootstrap Modal Footer -->
-      <div class="modal-footer justify-content-center">
-          <button type="button" class="btn color-green">Sign up</button>
-      </div>
+        </div>
+        <!-- Bootstrap Modal Footer -->
+        <div class="modal-footer justify-content-center">
+          <button type="submit" class="btn color-green">Sign up</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

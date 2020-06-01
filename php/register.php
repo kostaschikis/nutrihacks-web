@@ -9,14 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
-  $passwordConfirm = $_POST['passwordConfirm'];
 }
 
 // Validate Form Data
-if ($password != $passwordConfirm) {
-  header("Location: ../index.php?error=passwordnotmatch");
-  exit();
-} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   header("Location: ../index.php?error=wrongsemail");
   exit();
 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
