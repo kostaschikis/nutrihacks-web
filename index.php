@@ -30,7 +30,7 @@
   <!-- Bootstrap flex container: 2 flex items -->
   <div class="container">
     <!-- 1st flex item: Logo -->
-    <a class="navbar-brand d-flex d-sm-block" href="index.html">
+    <a class="navbar-brand d-flex d-sm-block" href="index.php">
       <img id="logo" src="img/cover-crop.png" alt="">
     </a>
     <!-- Navbar toggler that appears only for small screens -->
@@ -57,7 +57,7 @@
         </li>
         <li class="nav-item align-self-center">
           <form class="form-inline">
-            <button class="btn btn-light color-green">Register</button>
+            <button type="button" class="btn btn-light color-green" data-toggle="modal" data-target="#modalRegisterForm">Register</button>
           </form>
         </li>
       </ul>
@@ -65,6 +65,62 @@
   </div>
 </nav>
 
+<!-- Register Modal -->
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="mt-3 text-center">Sign Up</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <form class="pb-modalreglog-form-reg">
+          <div class="form-group">
+            <div id="pb-modalreglog-progressbar"></div>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold" for="name">Name</label>
+            <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" class="form-control" name="name" id="inputName" placeholder="Your Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold" for="username">Username</label>
+            <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" class="form-control" name="username" id="inputUsername" placeholder="Username">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold" for="email">Email address</label>
+            <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold" for="password">Password</label>
+            <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                <input type="password" class="form-control" name="password" id="inputPws" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group d-flex mb-2">
+            <input class="mr-2" type="checkbox" id="ch" name="chs">
+            I agree with <a href="#">terms and conditions.</a>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+          <button type="button" class="btn color-green">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
 <!-- Section: Who We Are Carousel -->
 <header id="whoweare" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
