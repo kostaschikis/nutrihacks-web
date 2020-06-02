@@ -16,7 +16,7 @@ $(function(){
 
     /**
      * AJAX Request
-     * Type: POST
+     * POST Request at contact.php
      * data: message - Passes the message object we previously created as the request's data
      * Saves the message in the DB
      */

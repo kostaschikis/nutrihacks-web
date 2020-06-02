@@ -3,23 +3,26 @@
 // Includes
 require 'config.php';
 
-// Get Form Data from POST request
+// If the server gets hit by a POST request
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Get Form Data from POST request
   $name = $_POST['name'];
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
-}
 
-// Validate Email & Username
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  header("Location: ../index.html?error=wrongsemail");
-  exit();
-} else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-  header("Location: ../index.html?error=wrongemailorpassword");
-}
 
-register_user($name, $username, $email, $password, $conn);
+  // Validate Email & Username
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header("Location: ../index.html?error=wrongsemail");
+    exit();
+  } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+    header("Location: ../index.html?error=wrongemailorpassword");
+  }
+
+  // Store user in DB
+  register_user($name, $username, $email, $password, $conn);
+}
 
 /**
  * function register_user

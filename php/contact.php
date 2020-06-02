@@ -3,15 +3,17 @@
 // Includes
 require 'config.php';
 
-// Get Form Data from POST request
+// If the server gets hit by a POST request
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Get Form Data from POST request
   $name = $_POST['name'];
   $email = $_POST['email'];
   $subject = $_POST['subject'];
   $message = $_POST['text'];
-}
 
-store_message($name, $email, $subject, $message, $conn);
+  // Store message in DB
+  store_message($name, $email, $subject, $message, $conn);
+}
 
 /**
  * function store_message

@@ -1,10 +1,11 @@
 # NutriHacks Website
 
-- [x] Blog Responsives
 - [ ] Transform all images to Webp
-- [x] index.php -> index.html ?
 - [ ] BMI Calc and result -> 1 row on desk
 - [ ] Comment BMI
+- [ ] Comment PHP files
+- [x] index.php -> index.html ?
+- [x] Blog Responsives
 - [x] Comment Blog
 - [x] Comment Contact
 - [x] Comment FAQ

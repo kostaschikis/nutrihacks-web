@@ -7,6 +7,7 @@ $(function() {
     
     /**
      * AJAX Request
+     * GET request at GetUsers.php
      * dataType: json - We expect the server to respond with a json file
      * Server returns an array of objects. Each object is a user
      */
@@ -15,16 +16,16 @@ $(function() {
       dataType: 'json',
       url: '../php/GetUsers.php',
       success: function(res) {
-        // Store response to a users array
+        // Store response to an array called users;
         users = res;
         // For each user append a table row to the table containing his data
         users.forEach(function(user) {
           $('#table-body').append(
             `
             <tr>
-            <td>${user.username}</td>
-            <td>${user.name}</td>
-            <td>${user.email}</td>
+              <td>${user.username}</td>
+              <td>${user.name}</td>
+              <td>${user.email}</td>
             </tr>
           `);
         });

@@ -16,7 +16,7 @@ $(function(){
     
     /**
      * AJAX Request
-     * Type: POST
+     * POST Request at register.php
      * data: user - Passes the user object we previously created as the request's data
      * Saves the user in the DB
      */

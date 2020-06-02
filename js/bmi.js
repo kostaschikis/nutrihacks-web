@@ -18,26 +18,30 @@ $(function() {
     let bmi = calcBMI(weight.val(), height.val());
 
     // 3. Find Weight Designation
-    let des = findDes(bmi, gender);
+    let des = findDes(parseFloat(bmi), gender);
 
     // 4. Display bmi in HTML
     result.text(bmi);
 
-    // 5. Display designation in HTML (with the right color)
+    // 5. Display designation in HTML and apply the right color to the text
     designetion.text(des.text);
+    // - Unmute the text 
     designetion.removeClass('text-muted');
+    // - Aplly the color
     designetion.css('color', des.color);
 
-    // 6. If client is on mobile device -> scroll result into view (result will be at the center of the screen)
+    // 6. If client is on mobile device -> scroll result into view 
     if (document.documentElement.clientWidth < 768) {
+      // The scroll will be smooth & the result will be at the center of the screen
       document.getElementById('bmi-result').scrollIntoView({behavior: "smooth", block: "center"});
     }
   })
 })
 
-// Calculates BMI and returns it with 1 decimal point
+// Calculates BMI 
 function calcBMI(weight, height) {
   if (weight > 0 && height > 0) {
+    // (weight / height^2) x 10000 with 1 decimal point 
     return parseFloat((weight / Math.pow(height, 2)) * 10000).toFixed(1);
   } else return 0
 } 
@@ -45,9 +49,6 @@ function calcBMI(weight, height) {
 // Finds weight designation based on BMI and gender 
 // Returns an object with the text to display & the appropriate color to match the designation
 function findDes(bmi, gender) {
-  // Converts bmi into a float because initially it passes through the function as a string
-  bmi = parseFloat(bmi);
-
   if (gender === 'male') {
     if (bmi < 18.5) {
       return {text: 'Underweight', color: '#147895'};
