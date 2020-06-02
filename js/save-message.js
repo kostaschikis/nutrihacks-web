@@ -14,20 +14,29 @@ $(function(){
       text: $('#con-text').val()
     };
 
-    // Make AJAX POST request to save the message in DB
+    /**
+     * AJAX Request
+     * Type: POST
+     * data: message - Passes the message object we previously created as the request's data
+     * Saves the message in the DB
+     */
     $.ajax({
       type: 'post',
       url: `${root}php/contact.php`,
       data: message,
       success: function() {
         console.log('Message stored successfully');
+        // Hide the contact modal
         $('#contactmodal').modal('hide');
+        // Insert text inside the <h4> of the success modal
         $('#successModalMessage').text("Your message has been sent successfully ✔");
+        // Show the success modal
         $('#successModal').modal('show'); 
-        // $('#reg-btn').hide();
       },
       error: function() {
+        // Hide the modal
         $('#contactmodal').modal('hide');
+        // Show an alert
         alert('Something went wrong, please try again');
       }
     });

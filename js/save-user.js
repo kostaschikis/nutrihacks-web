@@ -14,20 +14,29 @@ $(function(){
       password: $('#inputPws').val()
     };
     
-    // Make AJAX POST request to save the user in DB
+    /**
+     * AJAX Request
+     * Type: POST
+     * data: user - Passes the user object we previously created as the request's data
+     * Saves the user in the DB
+     */
     $.ajax({
       type: 'post',
       url: `${root}php/register.php`,
       data: user,
       success: function() {
         console.log('User stored successfully');
+        // Hide the contact modal
         $('#modalRegisterForm').modal('hide');
+        // Insert text inside the <h4> of the success modal
         $('#successModalMessage').text("You registered successfully, welcome aboard 💪");
+        // Show the success modal
         $('#successModal').modal('show'); 
-        // $('#reg-btn').hide();
       },
       error: function() {
+        // Hide the modal
         $('#modalRegisterForm').modal('hide');
+        // Show an alert
         alert('Something went wrong, please try again');
       }
     });
