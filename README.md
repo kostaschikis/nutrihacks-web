@@ -2,6 +2,8 @@
 
 - [x] Blog Responsives
 - [ ] Transform all images to Webp
+- [x] index.php -> index.html ?
+- [ ] BMI Calc and result -> 1 row on desk
 - [ ] Comment BMI
 - [x] Comment Blog
 - [x] Comment Contact

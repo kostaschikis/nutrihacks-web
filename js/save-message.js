@@ -2,30 +2,30 @@ $(function(){
   // Define where is the root dir based on which page we are
   const root = (window.location.href.indexOf("views") > -1) ? '../' : './';
 
-  $('#signup-btn').click(function(e) {
+  $('#contact-btn').click(function(e) {
     e.preventDefault();
     
     // Get form data and store it in a user object
-    let user = {
-      name: $('#inputName').val(),
-      username: $('#inputUsername').val(),
-      email: $('#inputEmail').val(),
-      password: $('#inputPws').val()
+    let message = {
+      name: $('#con-name').val(),
+      email: $('#con-email').val(),
+      subject: $('#con-sub').val(),
+      text: $('#con-text').val()
     };
     // Make AJAX POST request to save the user in DB
     $.ajax({
       type: 'post',
-      url: `${root}php/register.php`,
-      data: user,
+      url: `${root}php/contact.php`,
+      data: message,
       success: function() {
-        console.log('User stored successfully');
-        $('#modalRegisterForm').modal('hide');
-        $('#successModalMessage').text("You registered successfully, welcome aboard 💪");
+        console.log('Message stored successfully');
+        $('#contactmodal').modal('hide');
+        $('#successModalMessage').text("Your message has been sent successfully ✔");
         $('#successModal').modal('show'); 
         // $('#reg-btn').hide();
       },
       error: function() {
-        $('#modalRegisterForm').modal('hide');
+        $('#contactmodal').modal('hide');
         alert('Something went wrong, please try again');
       }
     });

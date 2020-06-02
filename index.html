@@ -30,7 +30,7 @@
     <!-- Bootstrap flex container: 2 flex items -->
     <div class="container">
       <!-- 1st flex item: Logo -->
-      <a class="navbar-brand d-flex d-sm-block" href="index.php">
+      <a class="navbar-brand d-flex d-sm-block" href="index.html">
         <img id="logo" src="img/cover-crop.png" alt="">
       </a>
       <!-- Navbar toggler that appears only for small screens -->
@@ -125,16 +125,14 @@
     </div>
   </div>
 
-  <!-- Register Success Modal -->
-  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="success-modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <!-- Bootstrap modal content -->
       <div class="modal-content">
         <!-- Modal header -->
         <div class="modal-header justify-content-center">
-          <h5 class="modal-title text-success mt-3" id="exampleModalLongTitle">
-            You registerd successfully, welcome aboard 💪
-          </h5>
+          <h5 class="modal-title text-success mt-3" id="successModalMessage"></h5>
         </div>
         <!-- Modal footer -->
         <div class="modal-footer justify-content-center">
@@ -320,7 +318,7 @@
         Contact Us
       </a>
 
-      <!-- Bootstrap contact form Modal -->
+      <!-- Bootstrap Contact Form Modal -->
       <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -331,38 +329,52 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <!-- Modal Body -->
-            <div class="modal-body">
-              <div class="form-group">
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="fa fa-user"></i></div>
+            <!-- Modal Body - Bootstrap Form -->
+            <form id="contactForm" method="POST">
+              <div class="modal-body">
+                <!-- Form group: Name -->
+                <div class="form-group">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user"></i></div>
+                    </div>
+                    <input type="text" class="form-control" name="name" id="con-name" placeholder="First Name" required>
                   </div>
-                  <input type="text" class="form-control" name="name" placeholder="First Name" required>
+                </div>
+                <!-- Form group: Email -->
+                <div class="form-group">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                    </div>
+                    <input type="email" class="form-control" name="email" id="con-email" placeholder="you@example.com" required>
+                  </div>
+                </div>
+                <!-- Form group: Subject -->
+                <div class="form-group">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-file" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="text" class="form-control" name="subject" id="con-sub" placeholder="Subject" required>
+                  </div>
+                </div>
+                <!-- Form group: Message -->
+                <div class="form-group">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-comment"></i></div>
+                    </div>
+                    <textarea class="form-control" name="text" id="con-text" placeholder="Write your message here..." required></textarea>
+                  </div>
+                </div>
+                <!-- Submit -->
+                <div class="text-center">
+                    <!-- Bootstrap primary button but with changed color -->
+                    <input type="submit" id="contact-btn" value="Submit" class="btn btn-primary btn-block rounded-0 py-2">
                 </div>
               </div>
-              <div class="form-group">
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="fa fa-envelope"></i></div>
-                  </div>
-                  <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="fa fa-comment"></i></div>
-                  </div>
-                  <textarea class="form-control" placeholder="Write your message here..." required></textarea>
-                </div>
-              </div>
-              <!-- Submit -->
-              <div class="text-center">
-                  <!-- Bootstrap primary button but with changed color -->
-                  <input type="submit" value="Submit" class="btn btn-primary btn-block rounded-0 py-2">
-              </div>
-            </div>
+            </form>
             <!-- Modal Footer -->
             <div class="modal-footer">
               <!-- Bootstrap secondary button -->
@@ -390,9 +402,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <!-- Save User AJAX -->
   <script src="js/save-user.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <!-- <script src="js/jquery.easing.min.js"></script> -->
+  <!-- Save Message AJAX -->
+  <script src="js/save-message.js"></script>
 
 </body>
 
