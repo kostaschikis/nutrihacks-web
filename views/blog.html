@@ -23,15 +23,17 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+    <!-- Bootstrap flex container: 2 flex items -->
     <div class="container">
-      <!-- Logo -->
+      <!-- 1st flex item: Logo -->
       <a class="navbar-brand d-flex d-sm-block" href="../index.html">
         <img id="logo" src="../img/cover-crop.png" alt="">
       </a>
+      <!-- Navbar toggler that appears only for small screens -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Nav Links -->
+      <!-- 2nd flex item: Nav Links -->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -51,13 +53,90 @@
           </li>
           <li class="nav-item align-self-center">
             <form class="form-inline">
-              <button class="btn btn-light color-green">Register</button>
+              <button type="button" class="btn btn-light color-green" data-toggle="modal" id="reg-btn" data-target="#modalRegisterForm">Register</button>
             </form>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Register Bootstrap Modal -->
+  <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <!-- Boostrap Modal Content -->
+      <div class="modal-content">
+        <!-- Bootstrap Modal Header -->
+        <div class="modal-header">
+            <h4 class="mt-3 text-center">Sign Up</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="regmodal-dis">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!-- Bootstrap Modal Body - Register Form -->
+        <div class="modal-body">
+          <form id="registerForm" method="POST">
+            <!-- Name form group -->
+            <div class="form-group">
+              <label class="font-weight-bold" for="name">Name</label>
+              <div class="input-group pb-modalreglog-input-group">
+                  <input type="text" class="form-control" name="name" id="inputName" placeholder="Your Name" required>
+              </div>
+            </div>
+            <!-- Username form group -->
+            <div class="form-group">
+              <label class="font-weight-bold" for="username">Username</label>
+              <div class="input-group pb-modalreglog-input-group">
+                  <input type="text" class="form-control" name="username" id="inputUsername" placeholder="Username" required>
+              </div>
+            </div>
+            <!-- Email form group -->
+            <div class="form-group">
+              <label class="font-weight-bold" for="email">Email address</label>
+              <div class="input-group pb-modalreglog-input-group">
+                  <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email" required>
+              </div>
+            </div>
+            <!-- Password form group -->
+            <div class="form-group">
+              <label class="font-weight-bold" for="password">Password</label>
+              <div class="input-group pb-modalreglog-input-group">
+                  <input type="password" class="form-control" name="password" id="inputPws" placeholder="Password" required>
+              </div>
+            </div>
+            <!-- Terms & Conditions form group -->
+            <div class="form-group d-flex align-items-center mb-2 ">
+              <input class="mr-2" type="checkbox" id="ch" name="chs" required>
+              <span>
+                I agree with <a href="#"> terms and conditions.</a>
+              </span>
+            </div>
+          </div>
+          <!-- Bootstrap Modal Footer -->
+          <div class="modal-footer justify-content-center">
+            <button type="submit" id="signup-btn" class="btn color-green">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="success-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <!-- Bootstrap modal content -->
+      <div class="modal-content">
+        <!-- Modal header -->
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title text-success mt-3" id="successModalMessage"></h5>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="p-4 d-flex flex-column align-items-center justify-content-center" id="our-team">
@@ -214,6 +293,8 @@
 <!-- Bootstrap core JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- Save User AJAX -->
+<script src="../js/save-user.js"></script>
 
 </body>
 </html>
