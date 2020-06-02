@@ -13,10 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Validate Email & Username
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  header("Location: ../index.php?error=wrongsemail");
+  header("Location: ../index.html?error=wrongsemail");
   exit();
 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-  header("Location: ../index.php?error=wrongemailorpassword");
+  header("Location: ../index.html?error=wrongemailorpassword");
 }
 
 register_user($name, $username, $email, $password, $conn);
