@@ -2,6 +2,7 @@ $(function(){
   // Define where is the root dir based on which page we are
   const root = (window.location.href.indexOf("views") > -1) ? '../' : './';
 
+  // When user submits the sign up form
   $('#signup-btn').click(function(e) {
     e.preventDefault();
     
@@ -12,6 +13,7 @@ $(function(){
       email: $('#inputEmail').val(),
       password: $('#inputPws').val()
     };
+    
     // Make AJAX POST request to save the user in DB
     $.ajax({
       type: 'post',

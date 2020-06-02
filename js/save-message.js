@@ -2,17 +2,19 @@ $(function(){
   // Define where is the root dir based on which page we are
   const root = (window.location.href.indexOf("views") > -1) ? '../' : './';
 
+  // When user clicks on submits the contact form
   $('#contact-btn').click(function(e) {
     e.preventDefault();
     
-    // Get form data and store it in a user object
+    // Get form data and store it in a message object
     let message = {
       name: $('#con-name').val(),
       email: $('#con-email').val(),
       subject: $('#con-sub').val(),
       text: $('#con-text').val()
     };
-    // Make AJAX POST request to save the user in DB
+
+    // Make AJAX POST request to save the message in DB
     $.ajax({
       type: 'post',
       url: `${root}php/contact.php`,
