@@ -151,7 +151,7 @@
       <!-- Bootsrap Row: 2 flex items -->
       <div class="row justify-content-center align-content-center mt-3 mb-4 shadow"> 
         <div class="p-4 col-lg-6 border flex-fill">
-          <!-- 1st Flex itam: Bootstrap Form -->
+          <!-- 1st Flex item: Bootstrap Form -->
           <form role="form" id="bmi">     
             <div>
               <div class="form-group">
@@ -173,8 +173,11 @@
                 <label for="height_cm" class="font-weight-bold">Height (cm):</label>
                 <input type="number" id="height-cm" placeholder="height in cm" class="form-control" required>    
               </div>
+              <!-- Bootstrap Flex Row: Aligns button to the center of the container  -->
+              <div class="row justify-content-center">
+                <button type="submit" id="calc" class="btn btn-lg color-green shadow">Calculate</button>
+              </div>
             </div>
-            <button type="submit" id="calc" class="btn btn-lg color-green shadow">Calculate</button>
           </form>
         </div>
         <!-- 2nd Flex item: Flex div to show form results -->
