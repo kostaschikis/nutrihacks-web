@@ -1,7 +1,7 @@
 # NutriHacks Website
 
 - [ ] Transform all images to Webp
-- [ ] BMI Calc and result -> 1 row on desk
+- [x] BMI Calc and result -> 1 row on desk
 - [ ] Comment BMI
 - [ ] Comment PHP files
 - [x] index.php -> index.html ?

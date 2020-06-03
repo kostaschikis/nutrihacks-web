@@ -148,10 +148,10 @@
   <main class="flex-fill bg-light" role="main">
     <!-- Bootstrap Container -->
     <div class="container">
-      <!-- Bootsrap Row - Form Section -->
-      <div class="row justify-content-center align-content-center mt-3 mx-1 shadow"> 
-        <div class="p-4 border flex-fill">
-          <!-- Bootstrap Form -->
+      <!-- Bootsrap Row: 2 flex items -->
+      <div class="row justify-content-center align-content-center mt-3 mb-4 shadow"> 
+        <div class="p-4 col-lg-6 border flex-fill">
+          <!-- 1st Flex itam: Bootstrap Form -->
           <form role="form" id="bmi">     
             <div>
               <div class="form-group">
@@ -177,13 +177,14 @@
             <button type="submit" id="calc" class="btn btn-lg color-green shadow">Calculate</button>
           </form>
         </div>
-      </div>
-      <div class="row mb-4 justify-content-center">
-        <!-- Calculated BMI & designation is shown here -->
-        <div class="well text-center">
-          <h3 class="text-muted" id="bmi-text">Calculated BMI</h3>
-          <h2><span class="label" id="bmi-result" title="">0.0</span></h2>
-          <h4 class="text-muted" id="bmi-des">unknown</h4>
+        <!-- 2nd Flex item: Flex div to show form results -->
+        <div class="d-flex col-lg-6 border justify-content-center align-items-center p-4">
+          <!-- Calculated BMI & designation is shown here -->
+          <div class="well text-center">
+            <h3 class="text-muted" id="bmi-text">Calculated BMI</h3>
+            <h2><span class="label" id="bmi-result" title="">0.0</span></h2>
+            <h4 class="text-muted" id="bmi-des">unknown</h4>
+          </div>
         </div>
       </div>
       <div class="row mb-4">
