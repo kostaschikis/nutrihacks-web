@@ -22,7 +22,7 @@ $(function(){
      */
     $.ajax({
       type: 'post',
-      url: `${root}php/contact.php`,
+      url: `${root}php/Contact.php`,
       data: message,
       success: function() {
         console.log('Message stored successfully');

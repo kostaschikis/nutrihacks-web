@@ -22,7 +22,7 @@ $(function(){
      */
     $.ajax({
       type: 'post',
-      url: `${root}php/register.php`,
+      url: `${root}php/Register.php`,
       data: user,
       success: function() {
         console.log('User stored successfully');
