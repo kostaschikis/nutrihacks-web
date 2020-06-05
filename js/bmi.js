@@ -1,36 +1,39 @@
 $(function() {
   // DOM Elements
-  var weight = $('#weight-kg');
-  var height = $('#height-cm');
-  var genderField = $('input[name="gender"]');
   var result = $('#bmi-result');
   var designetion = $('#bmi-des');
 
   // When user clicks the 'calculate' button
   $('#calc').click(function(e) {
+
     // 1. Prevent reloading the page
     e.preventDefault();
 
-    // 2. Find the selected gender
+    // 2. Get form inputs & radio values
+    var weight = $('#weight-kg').val();
+    var height = $('#height-cm').val();
+    var genderField = $('input[name="gender"]');
+
+    // 3. Find the selected gender
     let gender = (genderField[0].checked) ? 'male' : 'female';
 
-    // 2. Calculate BMI
-    let bmi = calcBMI(weight.val(), height.val());
+    // 4. Calculate BMI
+    let bmi = calcBMI(weight, height);
 
-    // 3. Find Weight Designation
+    // 5. Find Weight Designation
     let des = findDes(parseFloat(bmi), gender);
 
-    // 4. Display bmi in HTML
+    // 6. Display bmi in HTML
     result.text(bmi);
 
-    // 5. Display designation in HTML and apply the right color to the text
+    // 7. Display designation in HTML and apply the right color to the text
     designetion.text(des.text);
     // - Unmute the text 
     designetion.removeClass('text-muted');
     // - Aplly the color
     designetion.css('color', des.color);
 
-    // 6. If client is on mobile device -> scroll result into view 
+    // 8. If client is on mobile device -> scroll result into view 
     if (document.documentElement.clientWidth < 768) {
       // The scroll will be smooth & the result will be at the center of the screen
       document.getElementById('bmi-result').scrollIntoView({behavior: "smooth", block: "center"});
@@ -46,7 +49,7 @@ function calcBMI(weight, height) {
   } else return 0
 } 
 
-// Finds weight designation based on BMI and gender 
+// Finds weight designation based on BMI and gender     
 // Returns an object with the text to display & the appropriate color to match the designation
 function findDes(bmi, gender) {
   if (gender === 'male') {
