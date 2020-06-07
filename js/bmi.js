@@ -3,8 +3,8 @@ $(function() {
   var result = $('#bmi-result');
   var designetion = $('#bmi-des');
 
-  // When user clicks the 'calculate' button
-  $('#calc').click(function(e) {
+  // When user submits the form (clicks the 'calculate' button)
+  $('#bmiForm').submit(function(e) {
 
     // 1. Prevent reloading the page
     e.preventDefault();
@@ -15,6 +15,11 @@ $(function() {
     var genderField = $('input[name="gender"]');
 
     // 3. Find the selected gender
+    // -- If the user didn't select a gender alert a message and exit the callback
+    if (genderField[0].checked == false && genderField[1].checked == false) {
+      alert('Please select your gender');
+      return;
+    } 
     let gender = (genderField[0].checked) ? 'male' : 'female';
 
     // 4. Calculate BMI
@@ -28,9 +33,9 @@ $(function() {
 
     // 7. Display designation in HTML and apply the right color to the text
     designetion.text(des.text);
-    // - Unmute the text 
+    // -- Unmute the text 
     designetion.removeClass('text-muted');
-    // - Aplly the color
+    // -- Aplly the color
     designetion.css('color', des.color);
 
     // 8. If client is on mobile device -> scroll result into view 

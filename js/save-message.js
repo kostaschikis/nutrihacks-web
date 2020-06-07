@@ -2,8 +2,8 @@ $(function(){
   // Define where is the root dir based on which page we are
   const root = (window.location.href.indexOf("views") > -1) ? '../' : './';
 
-  // When user clicks on submits the contact form
-  $('#contact-btn').click(function(e) {
+  // When user submits the contact form
+  $('#contactForm').submit(function(e) {
     e.preventDefault();
     
     // Get form data and store it in a message object
