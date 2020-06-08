@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         array_push($users, $user);
       }
     }
-    // Clse prepared statement
+    // Close prepared statement
     $stmt->close();
 
     // JSON encode the 'users' array and set the server respone to be a JSON array
