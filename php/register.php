@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST['email'];
   $password = $_POST['password'];
 
-
+  
   // Validate Email & Username
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     header("Location: ../index.html?error=wrongsemail");
