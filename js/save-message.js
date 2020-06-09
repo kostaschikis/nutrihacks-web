@@ -16,7 +16,7 @@ $(function(){
 
     /**
      * AJAX Request
-     * POST Request at contact.php
+     * POST Request to contact.php
      * data: message - Passes the message object we previously created as the request's data
      * Saves the message in the DB
      */
@@ -25,7 +25,6 @@ $(function(){
       url: `${root}php/Contact.php`,
       data: message,
       success: function() {
-        console.log('Message stored successfully');
         // Hide the contact modal
         $('#contactmodal').modal('hide');
         // Insert text inside the <h4> of the success modal

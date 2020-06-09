@@ -8,11 +8,6 @@ header {
     /* background-color: #5781b9; */
 }
 
-@media (max-width: 767.98px) {
-    header {
-        height: 40vh;
-    }
-}
 
 body, .sticky-footer-wrapper {
     min-height:100vh;

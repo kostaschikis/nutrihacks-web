@@ -7,7 +7,7 @@ $(function() {
     
     /**
      * AJAX Request
-     * GET request at GetUsers.php
+     * GET request to GetUsers.php
      * dataType: json - We expect the server to respond with a json file
      * Server returns an array of objects. Each object is a user
      */
