@@ -2,8 +2,8 @@
 
 - [ ] Transform all images to Webp
 - [x] BMI Calc and result -> 1 row on desk
-- [ ] Comment BMI
-- [ ] Comment PHP files
+- [x] Comment BMI
+- [x] Comment PHP files
 - [x] index.php -> index.html ?
 - [x] Blog Responsives
 - [x] Comment Blog
