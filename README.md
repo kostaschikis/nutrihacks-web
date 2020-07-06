@@ -4,6 +4,7 @@
 ## Features
 - BMI Calculator
 - Responsive Design
+- PHP Simple REST APIs
 
 ## What I Learned
 - Bootstrap 4 
